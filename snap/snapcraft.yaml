@@ -1,6 +1,6 @@
 name: ply-0xff07
 base: core22
-version: '0.2'
+version: '0.3'
 summary: Light-weight dynamic tracer leveraging BPF in Linux
 description: |
  ply is a light-weight dynamic tracer for Linux that leverages kernel's
@@ -14,7 +14,7 @@ grade: devel
 confinement: strict
 
 parts:
-  ply:
+  ply-0xff07:
     plugin: autotools
     source: https://github.com/iovisor/ply.git
     source-type: git
@@ -27,7 +27,7 @@ parts:
       - flex
       - bison
 apps:
-  ply:
+  ply-0xff07:
     command: usr/local/sbin/ply
     plugs:
       - hardware-observe
