@@ -1,6 +1,6 @@
-name: ply
+name: ply-0xff07
 base: core22
-version: '0.1'
+version: '0.2'
 summary: Light-weight dynamic tracer leveraging BPF in Linux
 description: |
  ply is a light-weight dynamic tracer for Linux that leverages kernel's
@@ -11,7 +11,7 @@ description: |
  ply also runs on aarch64, arm, riscv64, riscv32, and powerpc. 
 
 grade: devel
-confinement: devmode
+confinement: strict
 
 parts:
   ply:
@@ -33,5 +33,7 @@ apps:
       - hardware-observe
       - home
       - system-observe
+      - mount-observe
+      - system-trace
     environment:
       LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/local/lib
