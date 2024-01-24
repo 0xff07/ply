@@ -16,8 +16,8 @@ confinement: strict
 parts:
   ply-0xff07:
     plugin: autotools
-    source: https://github.com/iovisor/ply.git
-    source-type: git
+    source: ./
+    source-type: local
     build-packages:
       - autotools-dev
       - autoconf
